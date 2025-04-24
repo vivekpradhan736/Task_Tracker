@@ -48,7 +48,7 @@
 
      const login = async (email: string, password: string) => {
        try {
-         const response = await axios.post('http://localhost:5000/api/auth/login', {
+         const response = await axios.post('https://task-tracker-backend-scyc.onrender.com/api/auth/login', {
            email,
            password,
          });
@@ -80,7 +80,7 @@
 
      const signup = async (email: string, password: string, name: string, country: string) => {
        try {
-         const response = await axios.post('http://localhost:5000/api/auth/signup', {
+         const response = await axios.post('https://task-tracker-backend-scyc.onrender.com/api/auth/signup', {
            email,
            password,
            name,
@@ -114,7 +114,7 @@
 
      const logout = async () => {
        try {
-         await axios.post('http://localhost:5000/api/auth/logout');
+         await axios.post('https://task-tracker-backend-scyc.onrender.com/api/auth/logout');
          localStorage.removeItem('user');
          localStorage.removeItem('token');
          delete axios.defaults.headers.common['Authorization'];
